@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XVideos Access - Multilingual</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif, system-ui;
+            background: linear-gradient(to bottom, #000000, #1a1a1a);
+            color: #fff;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        #container {
+            width: 90%;
+            max-width: 900px;
+            background: rgba(30, 30, 30, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .heading {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff4500;
+            text-shadow: 2px 2px 10px #000;
+            margin-bottom: 20px;
+        }
+
+        .sub-heading {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            background: linear-gradient(45deg, #ff4500, #ff6347);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        #cta-button {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            background: linear-gradient(45deg, #ff4500, #ff6347);
+            text-transform: uppercase;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+        }
+
+        #cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.8);
+        }
+
+        .password-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .password-container input {
+            padding: 12px;
+            font-size: 18px;
+            width: 80%;
+            max-width: 400px;
+            background-color: #333;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .password-container button {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            background: linear-gradient(45deg, #ff4500, #ff6347);
+            text-transform: uppercase;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .password-container button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.8);
+        }
+
+        .notification {
+            display: none;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Адаптация изображений */
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Image without link -->
+        <div class="image-container">
+            <img src="ai_botfull.png" alt="AI Bot Full" />
+        </div>
+
+        <div class="sub-heading" data-translate="sub-heading">380000+ ВИДЕО ПО КАТЕГОРИЯМ</div>
+
+        <!-- Password Generator -->
+        <div class="password-container">
+            <input type="text" id="password" readonly placeholder="Generated Password will appear here" data-translate="password-placeholder">
+            <br>
+            <button onclick="generatePassword()" data-translate="generate-password">ПОЛУЧИТЕ ПАРОЛЬ ДЛЯ ДОСТУПА</button>
+            <button onclick="copyPassword()" data-translate="copy-password">Копировать пароль</button>
+            <div class="notification" id="notification" data-translate="password-copied">Пароль скопирован!</div>
+        </div>
+
+        <!-- Button -->
+        <a id="cta-button" href="https://www2.affhone.fyi/click?pid=116623&offer_id=531#join" 
+           target="_blank" rel="noopener noreferrer" data-translate="cta-button">Разблокировать контент XVideos сейчас бесплатно</a>
+    </div>
+
+<script>
+    // Переводы на разные языки
+    const translations = {
+        "ru": {
+            "sub-heading": "380000+ ВИДЕО ПО КАТЕГОРИЯМ",
+            "password-placeholder": "Сгенерированный пароль появится здесь",
+            "generate-password": "ПОЛУЧИТЕ ПАРОЛЬ ДЛЯ ДОСТУПА",
+            "copy-password": "Копировать пароль",
+            "password-copied": "Пароль скопирован!",
+            "cta-button": "Разблокировать контент XVideos сейчас бесплатно"
+        },
+        "en": {
+            "sub-heading": "380000+ VIDEOS BY CATEGORIES",
+            "password-placeholder": "Generated password will appear here",
+            "generate-password": "GET ACCESS PASSWORD",
+            "copy-password": "Copy Password",
+            "password-copied": "Password copied!",
+            "cta-button": "Unlock XVideos Content Now for Free"
+        },
+        "fr": {
+            "sub-heading": "380000+ VIDÉOS PAR CATÉGORIES",
+            "password-placeholder": "Le mot de passe généré apparaîtra ici",
+            "generate-password": "OBTENIR LE MOT DE PASSE D'ACCÈS",
+            "copy-password": "Copier le mot de passe",
+            "password-copied": "Mot de passe copié !",
+            "cta-button": "Débloquer le contenu XVideos maintenant gratuitement"
+        },
+        "de": {
+            "sub-heading": "380000+ VIDEOS NACH KATEGORIEN",
+            "password-placeholder": "Generiertes Passwort erscheint hier",
+            "generate-password": "PASSWORT ZUM ZUGRIFF ERHALTEN",
+            "copy-password": "Passwort kopieren",
+            "password-copied": "Passwort kopiert!",
+            "cta-button": "XVideos-Inhalt jetzt kostenlos freischalten"
+        },
+        "it": {
+            "sub-heading": "380000+ VIDEO PER CATEGORIA",
+            "password-placeholder": "La password generata apparirà qui",
+            "generate-password": "OTTIENI LA PASSWORD DI ACCESSO",
+            "copy-password": "Copia la password",
+            "password-copied": "Password copiata!",
+            "cta-button": "Sblocca il contenuto di XVideos ora gratuitamente"
+        },
+        "es": {
+            "sub-heading": "380000+ VIDEOS POR CATEGORÍAS",
+            "password-placeholder": "La contraseña generada aparecerá aquí",
+            "generate-password": "OBTENER CONTRASEÑA DE ACCESO",
+            "copy-password": "Copiar contraseña",
+            "password-copied": "¡Contraseña copiada!",
+            "cta-button": "Desbloquear contenido de XVideos ahora gratis"
+        },
+        "pt": {
+            "sub-heading": "380000+ VÍDEOS POR CATEGORIAS",
+            "password-placeholder": "A senha gerada aparecerá aqui",
+            "generate-password": "OBTER SENHA DE ACESSO",
+            "copy-password": "Copiar senha",
+            "password-copied": "Senha copiada!",
+            "cta-button": "Desbloquear conteúdo do XVideos agora de graça"
+        }
+    };
+
+    // Функция для определения языка браузера
+    function detectLanguage() {
+        const userLang = navigator.language || navigator.userLanguage;
+        const lang = userLang.split('-')[0]; // Получаем код языка (en, ru, fr и т.д.)
+        const supportedLanguages = ['en', 'ru', 'fr', 'de', 'it', 'es', 'pt']; // Список поддерживаемых языков
+        
+        // По умолчанию устанавливаем русский, если язык не поддерживается
+        const languageToSet = supportedLanguages.includes(lang) ? lang : 'ru';
+        setLanguage(languageToSet);
+    }
+
+    // Функция для изменения языка
+    function setLanguage(lang) {
+        const elements = document.querySelectorAll('[data-translate]');
+        elements.forEach(element => {
+            const key = element.getAttribute('data-translate');
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+    }
+
+    // Запуск определения языка при загрузке страницы
+    window.onload = detectLanguage;
+
+    // Функция генерации пароля
+    function generatePassword() {
+        const length = Math.floor(Math.random() * (16 - 14 + 1)) + 14;
+        const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_+";
+        let password = "";
+        for (let i = 0; i < length; i++) {
+            password += charset.charAt(Math.floor(Math.random() * charset.length));
+        }
+        document.getElementById("password").value = password;
+    }
+
+    // Функция для копирования пароля
+    function copyPassword() {
+        const password = document.getElementById('password').value;
+        navigator.clipboard.writeText(password).then(() => {
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        });
+    }
+</script>
+</body>
+</html>
