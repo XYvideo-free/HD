@@ -133,76 +133,76 @@
 
         <!-- Password Generator -->
         <div class="password-container">
-            <input type="text" id="password" readonly placeholder="Generated Password will appear here" data-translate="password-placeholder">
+            <input type="text" id="password" readonly placeholder="***************" data-translate="password-placeholder">
             <br>
-            <button onclick="generatePassword()" data-translate="generate-password">ПОЛУЧИТЕ ПАРОЛЬ ДЛЯ ДОСТУПА</button>
-            <button onclick="copyPassword()" data-translate="copy-password">Копировать пароль</button>
+            <button onclick="generatePassword()" data-translate="generate-password">ПОЛУЧИТЕ ПАРОЛЬ</button>
+            <button onclick="copyPassword()" data-translate="copy-password">КОПИРОВАТЬ</button>
             <div class="notification" id="notification" data-translate="password-copied">Пароль скопирован!</div>
         </div>
 
         <!-- Button -->
         <a id="cta-button" href="https://www2.affhone.fyi/click?pid=116623&offer_id=531#join" 
-           target="_blank" rel="noopener noreferrer" data-translate="cta-button">Разблокировать контент XVideos сейчас бесплатно</a>
+           target="_blank" rel="noopener noreferrer" data-translate="cta-button">ИСПОЛЬЗОВАТЬ ПАРОЛЬ ДЛЯ ПЕРЕНАПРАВЛЕНИЯ</a>
     </div>
 
 <script>
     // Переводы на разные языки
     const translations = {
+        "en": {
+            "sub-heading": "380000+ VIDEOS BY CATEGORY",
+            "password-placeholder": "***************",
+            "generate-password": "GET PASSWORD",
+            "copy-password": "COPY",
+            "password-copied": "Password copied!",
+            "cta-button": "USE PASSWORD TO REDIRECT"
+        },
         "ru": {
             "sub-heading": "380000+ ВИДЕО ПО КАТЕГОРИЯМ",
-            "password-placeholder": "Сгенерированный пароль появится здесь",
-            "generate-password": "ПОЛУЧИТЕ ПАРОЛЬ ДЛЯ ДОСТУПА",
-            "copy-password": "Копировать пароль",
+            "password-placeholder": "***************",
+            "generate-password": "ПОЛУЧИТЕ ПАРОЛЬ",
+            "copy-password": "КОПИРОВАТЬ",
             "password-copied": "Пароль скопирован!",
-            "cta-button": "Разблокировать контент XVideos сейчас бесплатно"
-        },
-        "en": {
-            "sub-heading": "380000+ VIDEOS BY CATEGORIES",
-            "password-placeholder": "Generated password will appear here",
-            "generate-password": "GET ACCESS PASSWORD",
-            "copy-password": "Copy Password",
-            "password-copied": "Password copied!",
-            "cta-button": "Unlock XVideos Content Now for Free"
+            "cta-button": "ИСПОЛЬЗОВАТЬ ПАРОЛЬ ДЛЯ ПЕРЕНАПРАВЛЕНИЯ"
         },
         "fr": {
-            "sub-heading": "380000+ VIDÉOS PAR CATÉGORIES",
-            "password-placeholder": "Le mot de passe généré apparaîtra ici",
-            "generate-password": "OBTENIR LE MOT DE PASSE D'ACCÈS",
-            "copy-password": "Copier le mot de passe",
-            "password-copied": "Mot de passe copié !",
-            "cta-button": "Débloquer le contenu XVideos maintenant gratuitement"
+            "sub-heading": "380000+ VIDÉOS PAR CATÉGORIE",
+            "password-placeholder": "***************",
+            "generate-password": "OBTENIR LE MOT DE PASSE",
+            "copy-password": "COPIER",
+            "password-copied": "Mot de passe copié!",
+            "cta-button": "UTILISER LE MOT DE PASSE POUR REDIRIGER"
         },
         "de": {
             "sub-heading": "380000+ VIDEOS NACH KATEGORIEN",
-            "password-placeholder": "Generiertes Passwort erscheint hier",
-            "generate-password": "PASSWORT ZUM ZUGRIFF ERHALTEN",
-            "copy-password": "Passwort kopieren",
+            "password-placeholder": "***************",
+            "generate-password": "PASSWORT ERHALTEN",
+            "copy-password": "KOPIEREN",
             "password-copied": "Passwort kopiert!",
-            "cta-button": "XVideos-Inhalt jetzt kostenlos freischalten"
+            "cta-button": "PASSWORT VERWENDEN, UM UMZULEITEN"
         },
         "it": {
             "sub-heading": "380000+ VIDEO PER CATEGORIA",
-            "password-placeholder": "La password generata apparirà qui",
-            "generate-password": "OTTIENI LA PASSWORD DI ACCESSO",
-            "copy-password": "Copia la password",
-            "password-copied": "Password copiata!",
-            "cta-button": "Sblocca il contenuto di XVideos ora gratuitamente"
+            "password-placeholder": "***************",
+            "generate-password": "OTTENERE LA PASSWORD",
+            "copy-password": "COPIA",
+            "password-copied": "Password copiato!",
+            "cta-button": "USARE LA PASSWORD PER IL REINDIRIZZAMENTO"
         },
         "es": {
-            "sub-heading": "380000+ VIDEOS POR CATEGORÍAS",
-            "password-placeholder": "La contraseña generada aparecerá aquí",
-            "generate-password": "OBTENER CONTRASEÑA DE ACCESO",
-            "copy-password": "Copiar contraseña",
+            "sub-heading": "380000+ VÍDEOS POR CATEGORÍAS",
+            "password-placeholder": "***************",
+            "generate-password": "OBTENER CONTRASEÑA",
+            "copy-password": "COPIAR",
             "password-copied": "¡Contraseña copiada!",
-            "cta-button": "Desbloquear contenido de XVideos ahora gratis"
+            "cta-button": "USAR CONTRASEÑA PARA REDIRIGIR"
         },
         "pt": {
             "sub-heading": "380000+ VÍDEOS POR CATEGORIAS",
-            "password-placeholder": "A senha gerada aparecerá aqui",
-            "generate-password": "OBTER SENHA DE ACESSO",
-            "copy-password": "Copiar senha",
+            "password-placeholder": "***************",
+            "generate-password": "OBTER SENHA",
+            "copy-password": "COPIAR",
             "password-copied": "Senha copiada!",
-            "cta-button": "Desbloquear conteúdo do XVideos agora de graça"
+            "cta-button": "USAR SENHA PARA REDIRECIONAR"
         }
     };
 
@@ -212,8 +212,8 @@
         const lang = userLang.split('-')[0]; // Получаем код языка (en, ru, fr и т.д.)
         const supportedLanguages = ['en', 'ru', 'fr', 'de', 'it', 'es', 'pt']; // Список поддерживаемых языков
         
-        // По умолчанию устанавливаем русский, если язык не поддерживается
-        const languageToSet = supportedLanguages.includes(lang) ? lang : 'ru';
+        // По умолчанию устанавливаем английский, если язык не поддерживается
+        const languageToSet = supportedLanguages.includes(lang) ? lang : 'en';
         setLanguage(languageToSet);
     }
 
