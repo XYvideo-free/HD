@@ -142,7 +142,7 @@
 
         <!-- Button -->
         <a id="cta-button" href="https://www2.affhone.fyi/click?pid=116623&offer_id=531#join" 
-           target="_blank" rel="noopener noreferrer" data-translate="cta-button">ИСПОЛЬЗОВАТЬ ПАРОЛЬ ДЛЯ ПЕРЕНАПРАВЛЕНИЯ</a>
+           target="_blank" rel="noopener noreferrer" data-translate="cta-button">РАЗБЛОКИРОВАТЬ ВСЕ КАТЕГОРИИ</a>
     </div>
 
 <script>
@@ -154,7 +154,7 @@
             "generate-password": "GET PASSWORD",
             "copy-password": "COPY",
             "password-copied": "Password copied!",
-            "cta-button": "USE PASSWORD TO REDIRECT"
+            "cta-button": "UNLOCK ALL CATEGORIES"
         },
         "ru": {
             "sub-heading": "380000+ ВИДЕО ПО КАТЕГОРИЯМ",
@@ -162,7 +162,7 @@
             "generate-password": "ПОЛУЧИТЕ ПАРОЛЬ",
             "copy-password": "КОПИРОВАТЬ",
             "password-copied": "Пароль скопирован!",
-            "cta-button": "ИСПОЛЬЗОВАТЬ ПАРОЛЬ ДЛЯ ПЕРЕНАПРАВЛЕНИЯ"
+            "cta-button": "РАЗБЛОКИРОВАТЬ ВСЕ КАТЕГОРИИ"
         },
         "fr": {
             "sub-heading": "380000+ VIDÉOS PAR CATÉGORIE",
@@ -170,7 +170,7 @@
             "generate-password": "OBTENIR LE MOT DE PASSE",
             "copy-password": "COPIER",
             "password-copied": "Mot de passe copié!",
-            "cta-button": "UTILISER LE MOT DE PASSE POUR REDIRIGER"
+            "cta-button": "DÉBLOQUER TOUTES LES CATÉGORIES"
         },
         "de": {
             "sub-heading": "380000+ VIDEOS NACH KATEGORIEN",
@@ -178,7 +178,7 @@
             "generate-password": "PASSWORT ERHALTEN",
             "copy-password": "KOPIEREN",
             "password-copied": "Passwort kopiert!",
-            "cta-button": "PASSWORT VERWENDEN, UM UMZULEITEN"
+            "cta-button": "ALLES KATEGORIEN FREISCHALTEN"
         },
         "it": {
             "sub-heading": "380000+ VIDEO PER CATEGORIA",
@@ -186,7 +186,7 @@
             "generate-password": "OTTENERE LA PASSWORD",
             "copy-password": "COPIA",
             "password-copied": "Password copiato!",
-            "cta-button": "USARE LA PASSWORD PER IL REINDIRIZZAMENTO"
+            "cta-button": "SBLOCCARE TUTTE LE CATEGORIE"
         },
         "es": {
             "sub-heading": "380000+ VÍDEOS POR CATEGORÍAS",
@@ -194,7 +194,7 @@
             "generate-password": "OBTENER CONTRASEÑA",
             "copy-password": "COPIAR",
             "password-copied": "¡Contraseña copiada!",
-            "cta-button": "USAR CONTRASEÑA PARA REDIRIGIR"
+            "cta-button": "DESBLOQUEAR TODAS LAS CATEGORÍAS"
         },
         "pt": {
             "sub-heading": "380000+ VÍDEOS POR CATEGORIAS",
@@ -202,7 +202,7 @@
             "generate-password": "OBTER SENHA",
             "copy-password": "COPIAR",
             "password-copied": "Senha copiada!",
-            "cta-button": "USAR SENHA PARA REDIRECIONAR"
+            "cta-button": "DESBLOQUEAR TODAS AS CATEGORIAS"
         }
     };
 
@@ -234,7 +234,7 @@
     // Функция генерации пароля
     function generatePassword() {
         const length = Math.floor(Math.random() * (16 - 15 + 1)) + 15;
-        const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_-+";
+        const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_+";
         let password = "";
         for (let i = 0; i < length; i++) {
             password += charset.charAt(Math.floor(Math.random() * charset.length));
