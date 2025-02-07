@@ -146,102 +146,175 @@
     </div>
 
 <script>
+    // Переводы на разные языки
     const translations = {
+        "en": {
+            "sub-heading": "380000+ VIDEOS BY CATEGORY",
+            "password-placeholder": "***************",
+            "generate-password": "GET PASSWORD",
+            "copy-password": "COPY",
+            "password-copied": "Password copied!",
+            "cta-button": "UNLOCK ALL CATEGORIES"
+        },
         "ru": {
             "sub-heading": "380000+ ВИДЕО ПО КАТЕГОРИЯМ",
             "password-placeholder": "***************",
-            "generate-password": "ПАРОЛЬ ПЕРЕНАПРАВЛЕНИЯ",
+            "generate-password": "ПОЛУЧИТЕ ПАРОЛЬ",
             "copy-password": "КОПИРОВАТЬ",
             "password-copied": "Пароль скопирован!",
-            "cta-button": "ПЕРЕНАПРАВЛЕНИЕ НА ВИДЕО"
-        },
-        "en": {
-            "sub-heading": "380000+ VIDEOS BY CATEGORIES",
-            "password-placeholder": "***************",
-            "generate-password": "REDIRECTION PASSWORD",
-            "copy-password": "COPY",
-            "password-copied": "Password copied!",
-            "cta-button": "REDIRECT TO VIDEO"
+            "cta-button": "РАЗБЛОКИРОВАТЬ ВСЕ КАТЕГОРИИ"
         },
         "fr": {
-            "sub-heading": "380000+ VIDÉOS PAR CATÉGORIES",
+            "sub-heading": "380000+ VIDÉOS PAR CATÉGORIE",
             "password-placeholder": "***************",
-            "generate-password": "MOT DE PASSE DE REDIRECTION",
+            "generate-password": "OBTENIR LE MOT DE PASSE",
             "copy-password": "COPIER",
-            "password-copied": "Mot de passe copié !",
-            "cta-button": "REDIRIGER VERS VIDEO"
+            "password-copied": "Mot de passe copié!",
+            "cta-button": "DÉBLOQUER TOUTES LES CATÉGORIES"
         },
         "de": {
             "sub-heading": "380000+ VIDEOS NACH KATEGORIEN",
             "password-placeholder": "***************",
-            "generate-password": "WEITERLEITUNGS-PASSWORT",
+            "generate-password": "PASSWORT ERHALTEN",
             "copy-password": "KOPIEREN",
             "password-copied": "Passwort kopiert!",
-            "cta-button": "ZUR VIDEO-UMLEITUNG"
+            "cta-button": "ALLES KATEGORIEN FREISCHALTEN"
         },
         "it": {
             "sub-heading": "380000+ VIDEO PER CATEGORIA",
             "password-placeholder": "***************",
-            "generate-password": "PASSWORD DI REDIREZIONAMENTO",
+            "generate-password": "OTTENERE LA PASSWORD",
             "copy-password": "COPIA",
             "password-copied": "Password copiato!",
-            "cta-button": "REINDIRIZZA AL VIDEO"
+            "cta-button": "SBLOCCARE TUTTE LE CATEGORIE"
         },
         "es": {
-            "sub-heading": "380000+ VIDEOS POR CATEGORÍAS",
+            "sub-heading": "380000+ VÍDEOS POR CATEGORÍAS",
             "password-placeholder": "***************",
-            "generate-password": "CONTRASEÑA DE REDIRECCIÓN",
+            "generate-password": "OBTENER CONTRASEÑA",
             "copy-password": "COPIAR",
             "password-copied": "¡Contraseña copiada!",
-            "cta-button": "REDIRECCIONAR A VIDEO"
+            "cta-button": "DESBLOQUEAR TODAS LAS CATEGORÍAS"
         },
         "pt": {
             "sub-heading": "380000+ VÍDEOS POR CATEGORIAS",
             "password-placeholder": "***************",
-            "generate-password": "SENHA DE REDIRECIONAMENTO",
+            "generate-password": "OBTER SENHA",
             "copy-password": "COPIAR",
             "password-copied": "Senha copiada!",
-            "cta-button": "REDIRECIONAR PARA VÍDEO"
+            "cta-button": "DESBLOQUEAR TODAS AS CATEGORIAS"
+        },
+        "no": {
+            "sub-heading": "380000+ VIDEOER ETTER KATEGORI",
+            "password-placeholder": "***************",
+            "generate-password": "FÅ PASSORD",
+            "copy-password": "KOPIER",
+            "password-copied": "Passord kopiert!",
+            "cta-button": "LÅS OPP ALLE KATEGORIER"
+        },
+        "ch": {
+            "sub-heading": "380000+ VIDEOS NACH KATEGORIEN",
+            "password-placeholder": "***************",
+            "generate-password": "PASSWORT ERHALTEN",
+            "copy-password": "KOPIEREN",
+            "password-copied": "Passwort kopiert!",
+            "cta-button": "ALLE KATEGORIEN FREISCHALTEN"
+        },
+        "au": {
+            "sub-heading": "380000+ VIDEOS BY CATEGORY",
+            "password-placeholder": "***************",
+            "generate-password": "GET PASSWORD",
+            "copy-password": "COPY",
+            "password-copied": "Password copied!",
+            "cta-button": "UNLOCK ALL CATEGORIES"
+        },
+        "dk": {
+            "sub-heading": "380000+ VIDEOER EFTER KATEGORI",
+            "password-placeholder": "***************",
+            "generate-password": "FÅ ADGANGSKODE",
+            "copy-password": "KOPIER",
+            "password-copied": "Adgangskode kopieret!",
+            "cta-button": "LÅS ALLE KATEGORIER OP"
+        },
+        "at": {
+            "sub-heading": "380000+ VIDEOS NACH KATEGORIEN",
+            "password-placeholder": "***************",
+            "generate-password": "PASSWORT ERHALTEN",
+            "copy-password": "KOPIEREN",
+            "password-copied": "Passwort kopiert!",
+            "cta-button": "ALLE KATEGORIEN FREISCHALTEN"
+        },
+        "be": {
+            "sub-heading": "380000+ VIDÉOS PAR CATÉGORIE",
+            "password-placeholder": "***************",
+            "generate-password": "OBTENIR LE MOT DE PASSE",
+            "copy-password": "COPIER",
+            "password-copied": "Mot de passe copié!",
+            "cta-button": "DÉBLOQUER TOUTES LES CATÉGORIES"
+        },
+        "cz": {
+            "sub-heading": "380000+ VIDEA PODLE KATEGORIÍ",
+            "password-placeholder": "***************",
+            "generate-password": "ZÍSKAT HESLO",
+            "copy-password": "KOPÍROVAT",
+            "password-copied": "Heslo zkopírováno!",
+            "cta-button": "ODEMKNOUT VŠECHNY KATEGORIE"
+        },
+        "ee": {
+            "sub-heading": "380000+ VIDEOD KATEGOORI JAOKS",
+            "password-placeholder": "***************",
+            "generate-password": "SAAGE PAROOL",
+            "copy-password": "KOOPIA",
+            "password-copied": "Parool kopeeritud!",
+            "cta-button": "AVAGE KÕIK KATEGOORIAD"
         },
         "fi": {
             "sub-heading": "380000+ VIDEOITA KATEGORIOITTAIN",
             "password-placeholder": "***************",
-            "generate-password": "OHJELMAN SALASANA",
+            "generate-password": "SAAD PASSIWORDIN",
             "copy-password": "KOPIOI",
             "password-copied": "Salasana kopioitu!",
-            "cta-button": "SUUNTAA VIDEOON"
+            "cta-button": "AVAA KAIKKI KATEGORIOIDEN SISÄLLÖT"
         },
         "il": {
-            "sub-heading": "380000+ וידאו לפי קטגוריות",
+            "sub-heading": "380000+ וִידֵאוֹת בקטגוריות",
             "password-placeholder": "***************",
-            "generate-password": "סיסמת הפניית",
+            "generate-password": "קַבֵּל סִיסְמָה",
             "copy-password": "העתק",
             "password-copied": "הסיסמה הועתקה!",
-            "cta-button": "הפנה לווידאו"
+            "cta-button": "שחרר את כל הקטגוריות"
         },
         "nl": {
             "sub-heading": "380000+ VIDEO'S PER CATEGORIE",
             "password-placeholder": "***************",
-            "generate-password": "DOORVERWIJZINGSWACHTWOORD",
-            "copy-password": "KOPIEEREN",
+            "generate-password": "KRIJG WACHTWOORD",
+            "copy-password": "KOPIËREN",
             "password-copied": "Wachtwoord gekopieerd!",
-            "cta-button": "DOORVERWIJZEN NAAR VIDEO"
+            "cta-button": "ONBLOKKEER ALLE CATEGORIEËN"
         },
         "nz": {
             "sub-heading": "380000+ VIDEOS BY CATEGORY",
             "password-placeholder": "***************",
-            "generate-password": "REDIRECTION PASSWORD",
+            "generate-password": "GET PASSWORD",
             "copy-password": "COPY",
             "password-copied": "Password copied!",
-            "cta-button": "REDIRECT TO VIDEO"
+            "cta-button": "UNLOCK ALL CATEGORIES"
         },
         "sk": {
             "sub-heading": "380000+ VIDEÁ PODĽA KATEGÓRIÍ",
             "password-placeholder": "***************",
-            "generate-password": "HESLO PRE PRENOS",
+            "generate-password": "ZÍSKAŤ HESLO",
             "copy-password": "KOPÍROVAŤ",
             "password-copied": "Heslo skopírované!",
-            "cta-button": "PRENOS NA VIDEO"
+            "cta-button": "ODOMKNÚŤ VŠETKY KATEGÓRIE"
+        },
+        "jp": {
+            "sub-heading": "380000+ カテゴリ別ビデオ",
+            "password-placeholder": "***************",
+            "generate-password": "パスワードを取得",
+            "copy-password": "コピー",
+            "password-copied": "パスワードがコピーされました！",
+            "cta-button": "すべてのカテゴリをアンロック"
         }
     };
 
@@ -249,7 +322,7 @@
     function detectLanguage() {
         const userLang = navigator.language || navigator.userLanguage;
         const lang = userLang.split('-')[0]; // Получаем код языка (en, ru, fr и т.д.)
-        const supportedLanguages = ['en', 'ru', 'fr', 'de', 'it', 'es', 'pt']; // Список поддерживаемых языков
+        const supportedLanguages = ['en', 'ru', 'fr', 'de', 'it', 'es', 'pt', 'no', 'ch', 'au', 'dk', 'at', 'be', 'cz', 'ee', 'fi', 'il', 'nl', 'nz', 'sk', 'jp']; // Список поддерживаемых языков
         
         // По умолчанию устанавливаем английский, если язык не поддерживается
         const languageToSet = supportedLanguages.includes(lang) ? lang : 'en';
@@ -293,5 +366,6 @@
         });
     }
 </script>
+
 </body>
 </html>
